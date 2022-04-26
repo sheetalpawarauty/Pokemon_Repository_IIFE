@@ -6,6 +6,16 @@ let pokemonRepository = (function () {
     { name: 'seel', height: 11, types: ['water','field'] },
     { name: 'squirtle', height: 5, types: ['monster','water'] }
   ];
+  function add(pokemon) {
+    pokemonList.push(pokemon);
+  }
+  function getAll() {
+    return pokemonList;
+  }
+  return {
+    add: add,
+    getAll: getAll
+  };
 })();
 
   document.write("Pokemon Array List:");
