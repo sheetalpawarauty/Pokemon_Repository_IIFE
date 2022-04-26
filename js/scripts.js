@@ -18,7 +18,8 @@ let pokemonRepository = (function () {
   };
 })();
 
-  document.write("Pokemon Array List:");
-  document.write("<ul>");
-  pokemonList.forEach(item => document.write("<li>"+item.name+" "+"(height: "+item.height+")<\/li>"))
-  document.write("<\/ul>");
+document.write("Pokemon Array List:");
+let pokemonGetList = pokemonRepository.getAll();
+document.write("<ul>");
+pokemonGetList.forEach(item => document.write("<li>"+item.name+" "+"(height: "+item.height+")<\/li>"))
+document.write("<\/ul>");
